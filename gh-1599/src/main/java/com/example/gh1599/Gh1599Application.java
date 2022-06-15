@@ -11,14 +11,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.nativex.hint.MethodHint;
-import org.springframework.nativex.hint.NativeHint;
-import org.springframework.nativex.hint.TypeHint;
 
 @SpringBootApplication
-@NativeHint(types = @TypeHint(
-		types = HikariDataSource.class, methods = { @MethodHint(name = "<init>") })
-)
+//@NativeHint(types = {
+//		@TypeHint(types = HikariDataSource.class, methods = { @MethodHint(name = "<init>") }),
+//		@TypeHint(types = Statement[].class, access = {})
+//})
 public class Gh1599Application {
 
 	public static void main(String[] args) {
